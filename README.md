@@ -106,7 +106,7 @@ Details: [android/README.md](android/README.md)
 ## 📞 Support
 
 - Documentation: [wiki.playgama.com](https://wiki.playgama.com/playgama/for-partners/import-the-game-catalog)
-- Email: [email protected]
+- Email: partners@playgama.com
 
 ---
 

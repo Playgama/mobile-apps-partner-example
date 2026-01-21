@@ -179,6 +179,6 @@ configuration.websiteDataStore = .nonPersistent()
 
 ## 📞 Support
 
-For integration questions: **[email protected]**
+For integration questions: **partners@playgama.com**
 
 Documentation: [wiki.playgama.com](https://wiki.playgama.com/playgama/for-partners/import-the-game-catalog)
