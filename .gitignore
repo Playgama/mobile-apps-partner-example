@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Xcode
+ios/PlaygamaGames.xcodeproj/project.xcworkspace/
+ios/PlaygamaGames.xcodeproj/xcuserdata/
+ios/*.xcuserstate
+ios/build/
+ios/DerivedData/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.iml
+android/.idea/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Build outputs
+*.apk
+*.aab
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ========================================================================
+     AndroidManifest.xml
+     Манифест Android-приложения
+     ======================================================================== 
+     
+     Важные разрешения:
+     - INTERNET — для загрузки игр и изображений
+     
+     Важные настройки:
+     - usesCleartextTraffic="true" — для HTTP-контента (некоторые ресурсы)
+     - hardwareAccelerated="true" — для производительности WebView
+     
+     ======================================================================== -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ================================================================
+         РАЗРЕШЕНИЯ
+         ================================================================ -->
+    
+    <!-- Доступ к интернету — ОБЯЗАТЕЛЬНО для игр и изображений -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Проверка состояния сети (опционально) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- ================================================================
+         ПРИЛОЖЕНИЕ
+         ================================================================ -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PlaygamaGames"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true">
+
+        <!-- ============================================================
+             ГЛАВНАЯ ACTIVITY — Список игр
+             ============================================================ -->
+        <activity
+            android:name=".ui.GameListActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PlaygamaGames">
+            
+            <!-- Точка входа в приложение -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+
+        <!-- ============================================================
+             ACTIVITY ИГРЫ — WebView с игрой
+             ============================================================ -->
+        <activity
+            android:name=".ui.GameWebViewActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PlaygamaGames.Fullscreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="sensor"
+            android:enableOnBackInvokedCallback="false">
+            
+            <!--
+            Важные атрибуты:
+            
+            - configChanges: Не пересоздавать Activity при смене ориентации
+              (игра продолжит работать без перезагрузки)
+            
+            - hardwareAccelerated: Аппаратное ускорение для WebView
+              (важно для производительности игр)
+            
+            - screenOrientation="sensor": Автоматическая ориентация
+              (можно переопределить программно для конкретной игры)
+            -->
+            
+        </activity>
+
+    </application>
+
+</manifest>

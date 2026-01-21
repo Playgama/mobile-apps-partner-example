@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ========================================================================
+     activity_game_webview.xml
+     Layout для экрана запуска игры в WebView
+     ======================================================================== 
+     
+     Структура:
+     - Верхняя панель с кнопкой Exit и названием игры
+     - WebView — основной элемент для отображения игры
+     - ProgressBar — индикатор загрузки
+     - Error Container — отображение ошибки с кнопкой повтора
+     
+     ======================================================================== -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    tools:context=".ui.GameWebViewActivity">
+
+    <!-- ================================================================
+         ВЕРХНЯЯ ПАНЕЛЬ с кнопкой Exit
+         ================================================================ -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@android:color/black">
+
+        <!-- Кнопка Exit -->
+        <Button
+            android:id="@+id/exitButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:minWidth="80dp"
+            android:text="@string/exit_button"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#33FFFFFF"
+            android:drawableStart="@drawable/ic_arrow_back"
+            android:drawablePadding="4dp"
+            android:drawableTint="@android:color/white" />
+
+        <!-- Название игры (по центру) -->
+        <TextView
+            android:id="@+id/gameTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            tools:text="Game Title" />
+
+        <!-- Пустое место для симметрии -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+    <!-- ================================================================
+         КОНТЕЙНЕР ДЛЯ ИГРЫ (WebView + Loading + Error)
+         ================================================================ -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- WebView — здесь отображается игра -->
+        <WebView
+            android:id="@+id/gameWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Индикатор загрузки (ProgressBar) -->
+        <LinearLayout
+            android:id="@+id/loadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@android:color/black"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/loadingProgress"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:indeterminateTint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/loading_game"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Контейнер ошибки -->
+        <LinearLayout
+            android:id="@+id/errorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@android:color/black"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <!-- Иконка ошибки -->
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_dialog_alert"
+                android:contentDescription="@string/error_icon_description" />
+
+            <!-- Заголовок ошибки -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/error_loading_title"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Текст ошибки -->
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:maxWidth="280dp"
+                android:text="@string/error_loading_message"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <!-- Кнопка повтора -->
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:minWidth="120dp"
+                android:text="@string/retry_button" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

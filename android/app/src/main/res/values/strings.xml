@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- String resources for the app -->
+
+<resources>
+    <!-- App name -->
+    <string name="app_name">Playgama Games</string>
+    
+    <!-- Game list screen -->
+    <string name="games_count">%d games</string>
+    <string name="search_hint">Search games...</string>
+    <string name="loading_catalog">Loading game catalog...</string>
+    <string name="no_games_found">No games found</string>
+    
+    <!-- Game screen -->
+    <string name="exit_button">Exit</string>
+    <string name="loading_game">Loading game...</string>
+    <string name="error_loading_title">Loading Error</string>
+    <string name="error_loading_message">Failed to load the game. Please check your internet connection.</string>
+    <string name="retry_button">Retry</string>
+    
+    <!-- Accessibility -->
+    <string name="close_button_description">Close game</string>
+    <string name="error_icon_description">Error icon</string>
+    <string name="game_thumbnail_description">%s game preview</string>
+</resources>

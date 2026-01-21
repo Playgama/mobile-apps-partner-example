@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ========================================================================
+     placeholder_game.xml
+     Placeholder для превью игры (пока изображение загружается)
+     ======================================================================== -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Фоновый цвет -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" />
+        </shape>
+    </item>
+    
+    <!-- Иконка геймпада по центру -->
+    <item
+        android:gravity="center"
+        android:width="48dp"
+        android:height="48dp">
+        <vector
+            android:width="48dp"
+            android:height="48dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24"
+            android:tint="#9E9E9E">
+            <path
+                android:fillColor="#9E9E9E"
+                android:pathData="M15,7.5V2H9v5.5l3,3l3,-3zM7.5,9H2v6h5.5l3,-3l-3,-3zM9,16.5V22h6v-5.5l-3,-3l-3,3zM16.5,9l-3,3l3,3H22V9h-5.5z"/>
+        </vector>
+    </item>
+    
+</layer-list>

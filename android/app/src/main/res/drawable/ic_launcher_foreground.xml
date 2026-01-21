@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Иконка приложения (foreground layer) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Gamepad icon -->
+    <group
+        android:translateX="27"
+        android:translateY="27">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M27,18 L27,9 L18,9 L18,18 L9,18 L9,27 L18,27 L18,36 L27,36 L27,27 L36,27 L36,18 L27,18 Z M36,9 L45,9 L45,18 L36,18 L36,9 Z M9,36 L18,36 L18,45 L9,45 L9,36 Z"/>
+    </group>
+</vector>
