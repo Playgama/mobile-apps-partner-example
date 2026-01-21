@@ -60,6 +60,18 @@ sdk-embed/
 
 ---
 
+## 📱 Screenshots
+
+<p align="center">
+  <img src="img/img-1.png" width="200" alt="Game Catalog"/>
+  <img src="img/img-2.png" width="200" alt="Game Loading"/>
+  <img src="img/img-3.png" width="200" alt="Game Playing"/>
+  <img src="img/img-4.png" width="200" alt="Game with Ad"/>
+  <img src="img/img-5.png" width="200" alt="Another Game"/>
+</p>
+
+---
+
 ## 🚀 Quick Start
 
 ### iOS
